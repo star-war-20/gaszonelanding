@@ -102,6 +102,24 @@ a {
   border-radius: 5px;
   font-weight: 600;
 }
+.gradient-text {
+  background: linear-gradient(90deg, #f34a2b, #0d1f52, #f34a2b);
+  background-size: 200% 200%;
+  animation: gradientMove 4s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 
 .dot {
   width: 10px;
@@ -1083,7 +1101,8 @@ a {
 
 /* text color blink animation */
 .callText {
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 25px;
   animation: textBlink 1.5s linear infinite;
 }
 
